@@ -13,8 +13,8 @@ spec:
         app: devops
     spec:
       containers:
-      - name:  azure-web-search
-        image: truthaniket/azure-web-search:latest
+      - name:  jenkinsdevops
+        image: truthaniket/jenkinsdevops:latest
        
 ---
 
@@ -23,7 +23,7 @@ kind: Service
 metadata:
   name: service-html
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
   - port: 80
     targetPort: 5000
