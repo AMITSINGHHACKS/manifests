@@ -23,7 +23,7 @@ kind: Service
 metadata:
   name: service-html
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 5000
