@@ -13,8 +13,8 @@ spec:
         app: devops
     spec:
       containers:
-      - name:  jenkinsdevops
-        image: truthaniket/jenkinsdevops:latest
+      - name:  azure-web-search
+        image: truthaniket/azure-web-search:latest
        
 ---
 
