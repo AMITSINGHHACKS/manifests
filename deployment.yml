@@ -1,38 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
-  labels:
-    app: devops
   name: devops
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: devops
-  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: devops
     spec:
       containers:
-      - image: truthaniket/azure-web-search:latest
-        name: azure-web-search
-        resources: {}
-status: {}
+      - name: azure-web-search
+        image: truthaniket/azure-web-search:latest
+        ports:
+        - containerPort: 80
+
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: lb-service
-  labels:
-    app: lb-service
+  name: service-html
 spec:
   type: LoadBalancer
   ports:
-  - port: 80
-    targetPort: 5000
+  - port: 8081
+    targetPort: 80
   selector:
     app: devops
