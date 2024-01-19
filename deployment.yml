@@ -13,8 +13,8 @@ spec:
         app: devops
     spec:
       containers:
-      - name: azure-web-search
-        image: truthaniket/azure-web-search:latest
+      - name: hello-world
+        image: hello-world
         ports:
         - containerPort: 80
 
