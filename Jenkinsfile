@@ -16,7 +16,7 @@ node {
                         sh "git config user.name AMITSINGHHACKS"
                         //sh "git switch master"
                         sh "cat deployment.yml"
-                        sh "sed -i 's+truthaniket/azure-web-search.*+truthaniket/azure-web-search:1.0.0-${DOCKERTAG}+g' deployment.yml"
+                        sh "sed -i 's+truthaniket/azure-web-search.*+truthaniket/azure-web-search:${DOCKERTAG}+g' deployment.yml"
                         sh "cat deployment.yml"
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"

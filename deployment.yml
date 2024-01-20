@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: azure-web-search
-        image: truthaniket/azure-web-search:latest
+        image: truthaniket/azure-web-search:1.0.0-${DOCKERTAG}
         ports:
         - containerPort: 6000
 
