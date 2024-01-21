@@ -1,12 +1,11 @@
-node {
-    def app
+pipeline {
+    agent any
 
     environment {
         APP_NAME = "azure-web-search"
     }
-    stage('Clone repository') {
-      
 
+    stage('Clone repository') {
         checkout scm
     }
 
