@@ -1,13 +1,12 @@
 pipeline {
     agent any
-
     stages {
         stage('GIT CHECKOUT') {
             steps {
                 checkout scm
             }
         }
-        stage('GIT CHECKOUT') {
+        stage('Update manifest') {
             steps {
                 script {
                     catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
