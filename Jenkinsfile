@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        APP_NAME = "azure-web-search"
+    }
     stages {
         stage('GIT CHECKOUT') {
             steps {
