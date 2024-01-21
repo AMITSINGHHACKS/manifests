@@ -1,6 +1,9 @@
 node {
     def app
 
+    environment {
+        APP_NAME = "azure-web-search"
+    }
     stage('Clone repository') {
       
 
