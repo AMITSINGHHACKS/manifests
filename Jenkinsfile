@@ -18,9 +18,9 @@ pipeline {
                             sh "git config --global user.email amitkumar.singh@vsit.edu.in"
                             sh "git config --global user.name AMITSINGHHACKS"
                             //sh "git switch master"
-                            sh "cat deployment.yml"
+                            sh "cat deployment.yaml"
                             sh "sed -i 's+${APP_NAME}.*+${APP_NAME}:${IMAGE_TAG}+g' deployment.yml"
-                            sh "cat deployment.yml"
+                            sh "cat deployment.yaml"
                             sh "git add ."
                             sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
                             withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
