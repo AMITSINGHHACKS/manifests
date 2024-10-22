@@ -19,7 +19,7 @@ pipeline {
                             sh "git config --global user.name AMITSINGHHACKS"
                             //sh "git switch master"
                             sh "cat deployment.yaml"
-                            sh "sed -i 's+${APP_NAME}.*+${APP_NAME}:${IMAGE_TAG}+g' deployment.yml"
+                            sh "sed -i 's+${APP_NAME}.*+${APP_NAME}:${IMAGE_TAG}+g' deployment.yaml"
                             sh "cat deployment.yaml"
                             sh "git add ."
                             sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
