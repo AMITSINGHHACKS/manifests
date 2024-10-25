@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: devops
-        image: truthaniket/azure-web-search:1.0.0-7
+        image: truthaniket/azure-web-search:1.0.0-8
         ports:
         - containerPort: 6000
 
